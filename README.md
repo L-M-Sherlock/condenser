@@ -59,19 +59,30 @@ Development
 -----------
 Run "pre-commit install" to install the pre-commit hooks. This will make the formatter and linter run before each commit.
 
+Development Setup
+------------------
+### Using Conda (Recommended)
+* Create and activate the conda environment:
+  ```bash
+  conda env create -f ./env.yml
+  conda activate condenser-env
+  ```
+* Or use the provided activation script:
+  ```bash
+  ./activate_env.sh
+  ```
+
+### Using pip
+* Ensure you use Python version from 3.10 to 3.12
+* Run: `pip install -r ./requirements.txt`
+
 How to build an .exe file
 ---------------
-* Install dependencies:
-  * using conda:
-    - create environment from env.yml:
-      conda env create -f ./env.yml
-    - activate the environment:
-      conda activate condenser-env
-  * using pip:
-    - ensure you use Python version from 3.10 to 3.12
-    - run pip install -r ./requirements.txt
+* Install dependencies (see Development Setup above)
 * Run build script:
+  ```bash
   ./make_exe.bat
+  ```
 * You can find the output in the dist/condenser directory.
 
 
